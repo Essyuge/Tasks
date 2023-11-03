@@ -103,11 +103,21 @@ curl -X DELETE http://localhost:3000/tasks/1
 
 The API provides the following RESTful endpoints:
 
-* GET /tasks: Retrieve a list of tasks.
-* POST /tasks: Create a new task.
-* GET /tasks/:id: Retrieve a specific task by ID.
-* PUT /tasks/:id: Update a task.
-* DELETE /tasks/:id: Delete a task.
+
+1. **List All Tasks**
+   - Endpoint: `GET /tasks`
+
+2. **Create a Task**
+   - Endpoint: `POST /tasks`
+
+3. **Update a Task**
+   - Endpoint: `PUT /tasks/:id`
+
+4. **Delete a Task**
+   - Endpoint: `DELETE /tasks/:id`
+
+These are the primary endpoints for managing tasks in your API. Replace `:id` with the actual task ID in the `PUT` and `DELETE` endpoints when targeting specific tasks. For more detailed information about each endpoint, including request and response examples, please refer to the corresponding sections in this README.
+
 
 
 ## Authentication and Authorization
