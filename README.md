@@ -64,13 +64,13 @@ rails server
 
 This API is designed to be easy to integrate into your projects. You can use it as a standalone API or integrate it into web and mobile applications. Below are some basic examples of how to interact with the API:
 
-###Get a list of tasks
+### Get a list of tasks
 
 Retrieve a list of tasks with a GET request to /tasks.
 ```bash
 curl http://localhost:3000/tasks
 ```
-### Create a new task
+### Create a New Task
 
 Send a POST request to `/tasks` with the task details in the request body.
 
@@ -81,7 +81,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
   "due_date": "2023-11-15"
 }' http://localhost:3000/tasks
 ```
-###Update a task
+### Update a task
 
 Send a PUT request to /tasks/:id with the updated task details.
 ```bash
@@ -92,7 +92,7 @@ curl -X PUT -H "Content-Type: application/json" -d '{
 }' http://localhost:3000/tasks/1
 ```
 
-###Delete a task
+### Delete a task
 
 Send a DELETE request to /tasks/:id to delete a task.
 ```bash
