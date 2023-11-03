@@ -116,7 +116,7 @@ The API provides the following RESTful endpoints:
 4. **Delete a Task**
    - Endpoint: `DELETE /tasks/:id`
 
-These are the primary endpoints for managing tasks in your API. Replace `:id` with the actual task ID in the `PUT` and `DELETE` endpoints when targeting specific tasks. For more detailed information about each endpoint, including request and response examples, please refer to the corresponding sections in this README.
+These are the primary endpoints for managing tasks in your API. Replace `:id` with the actual task ID in the `PUT` and `DELETE` endpoints when targeting specific tasks. For more detailed information about each endpoint, including request and response examples, please refer to the corresponding sections in this README. 
 
 
 
