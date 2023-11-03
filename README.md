@@ -9,13 +9,12 @@ Welcome to the Tasks API, a Ruby on Rails-based API for managing tasks and to-do
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Installation](#installation) 
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Authentication and Authorization](#authentication-and-authorization)
 - [Error Responses](#error-responses)
-- [Database](#database)
-- [Contributing](#contributing)
+<!-- - [Database](#database) -->
 - [License](#license)
 
 ## Features
@@ -37,7 +36,7 @@ Before you begin, ensure you have the following prerequisites:
 - Rails (latest version)
 - PostgreSQL or MySQL database
 
-<!-- ### Installation
+### Installation
 
 1. Clone this repository to your local machine:
 
@@ -57,8 +56,8 @@ rails db:create
 rails db:migrate
 
 5. Start the Rails server:
-rails server -->
-
+rails server 
+```
 
 
 ## Usage
@@ -68,39 +67,37 @@ This API is designed to be easy to integrate into your projects. You can use it 
 ###Get a list of tasks
 
 Retrieve a list of tasks with a GET request to /tasks.
-
+```bash
 curl http://localhost:3000/tasks
-
+```
 ### Create a new task
 
 Send a POST request to `/tasks` with the task details in the request body.
 
-
+```bash
 curl -X POST -H "Content-Type: application/json" -d '{
   "title": "Complete project proposal",
   "description": "Create a detailed project proposal for the upcoming sprint.",
   "due_date": "2023-11-15"
 }' http://localhost:3000/tasks
-
-
-
+```
 ###Update a task
 
 Send a PUT request to /tasks/:id with the updated task details.
-
+```bash
 curl -X PUT -H "Content-Type: application/json" -d '{
   "title": "Complete project proposal (Updated)",
   "description": "Create a detailed project proposal for the upcoming sprint (Updated).",
   "due_date": "2023-11-20"
 }' http://localhost:3000/tasks/1
-
+```
 
 ###Delete a task
 
 Send a DELETE request to /tasks/:id to delete a task.
-
+```bash
 curl -X DELETE http://localhost:3000/tasks/1
-
+```
 
 ## API Endpoints
 
@@ -142,13 +139,13 @@ We provide structured and informative error responses to help developers underst
 - `500 Internal Server Error`: An unexpected server error occurred.
 
 For a comprehensive list of error codes and their meanings, refer to the [Error Handling](./ERROR_HANDLING.md) documentation.
-
+<!-- 
 ## Database
 
 The API relies on a  SQlite database to store task data. The database schema includes tables for tasks and users to ensure data integrity and security. This section provides details about the database structure.
 
 1. [Explain the structure of the database]
-2. [List the database tables and their relationships]
+2. [List the database tables and their relationships] -->
 
 
 
