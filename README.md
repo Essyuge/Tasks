@@ -37,7 +37,7 @@ Before you begin, ensure you have the following prerequisites:
 - Rails (latest version)
 - PostgreSQL or MySQL database
 
-### Installation
+<!-- ### Installation
 
 1. Clone this repository to your local machine:
 
@@ -46,15 +46,19 @@ git clone https://github.com/Essyuge/Tasks-API
 
 1. Navigate to the project directory:
 cd tasks-api
+
 2. Install gem dependencies:
 bundle install
+
 3. Configure the database connection in config/database.yml.
 
 4. Create and migrate the database:
 rails db:create
 rails db:migrate
+
 5. Start the Rails server:
-rails server
+rails server -->
+
 
 
 ## Usage
