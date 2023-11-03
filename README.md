@@ -75,12 +75,14 @@ curl http://localhost:3000/tasks
 
 Send a POST request to `/tasks` with the task details in the request body.
 
-```bash
+
 curl -X POST -H "Content-Type: application/json" -d '{
   "title": "Complete project proposal",
   "description": "Create a detailed project proposal for the upcoming sprint.",
   "due_date": "2023-11-15"
 }' http://localhost:3000/tasks
+
+
 
 ###Update a task
 
