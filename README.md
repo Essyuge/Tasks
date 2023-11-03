@@ -152,9 +152,9 @@ The API relies on a  SQlite database to store task data. The database schema inc
 
 
 
-# ## License
+## License
 
-# This project is licensed under the [1980/EU].
+This project is licensed under the [1980/EU].
 
-# 1. [Specify your license type and terms]
+<!-- 1. [Specify your license type and terms] -->
 
