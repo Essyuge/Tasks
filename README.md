@@ -137,6 +137,7 @@ To protect your resources, the API employs an authorization mechanism based on u
 
 1. [Explain how authorization is implemented]
 2. [Provide examples of user roles and permissions]
+<!-- install the Bcrypt gem  -->
 
 ## Error Responses
 
