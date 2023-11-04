@@ -92,8 +92,8 @@ Task.create(
     completed: false,
     user_id: 3
   )
-
-  # User.destroy_all
+  puts 'Task data created'
+#   # User.destroy_all
 
 # sample users
 User.create(
@@ -105,18 +105,18 @@ User.create(
 User.create(
   name: "Jane Smith",
   email: "jane@example.com",
-  password_digest: BCrypt::Password.create("securepass")
+  password_digest: BCrypt::Password.create("password345")
 )
 User.create(
     name: "Alice Johnson",
     email: "alice@example.com",
-    password_digest: BCrypt::Password.create("password456")
+    password_digest: BCrypt::Password.create("password678")
   )
   
   User.create(
     name: "Bob Anderson",
     email: "bob@example.com",
-    password_digest: BCrypt::Password.create("s3cur3p@ss")
+    password_digest: BCrypt::Password.create("password999")
   )
   
   User.create(
@@ -124,3 +124,4 @@ User.create(
     email: "ella@example.com",
     password_digest: BCrypt::Password.create("myPassw0rd")
   )
+  puts 'User data created'
