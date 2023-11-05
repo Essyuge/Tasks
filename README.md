@@ -13,8 +13,8 @@ Welcome to the Tasks API, a Ruby on Rails-based API for managing tasks and to-do
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Authentication and Authorization](#authentication-and-authorization)
-- [Error Responses](#error-responses)
-<!-- - [Database](#database) -->
+- [Error Handling and Validations](#error-responses)
+- [Database](#database)
 - [License](#license)
 
 ## Features
@@ -139,24 +139,20 @@ To protect your resources, the API employs an authorization mechanism based on u
 2. [Provide examples of user roles and permissions]
 <!-- install the Bcrypt gem  -->
 
-## Error Responses
+## Error Handling and Validation
 
-We provide structured and informative error responses to help developers understand and handle issues effectively. This section lists common error codes and their meanings:
+I Implemented error handling to return appropriate status codes and error messages when things go wrong, like invalid API requests or unavailable services.
 
-- `401 Unauthorized`: The request requires user authentication, or the provided credentials are invalid.
-- `403 Forbidden`: The authenticated user lacks permission to perform the requested action.
-- `404 Not Found`: The requested resource does not exist.
-- `422 Unprocessable Entity`: The request is well-formed, but the server couldn't process it due to validation errors.
-- `500 Internal Server Error`: An unexpected server error occurred.
 
-For a comprehensive list of error codes and their meanings, refer to the [Error Handling](./ERROR_HANDLING.md) documentation.
-<!-- 
+[Active Record Validations ](https://guides.rubyonrails.org/active_record_validations.html) This guide teaches you how to validate the state of objects before they go into the database using Active Record's validations feature.
+
 ## Database
 
-The API relies on a  SQlite database to store task data. The database schema includes tables for tasks and users to ensure data integrity and security. This section provides details about the database structure.
+The API relies on a  SQlite database to store task data. The database schema includes tables for tasks and users to ensure data integrity and security. 
+<!-- This section provides details about the database structure.
 
 1. [Explain the structure of the database]
-2. [List the database tables and their relationships] -->
+2. [List the database tables and their relationships]  -->
 
 
 

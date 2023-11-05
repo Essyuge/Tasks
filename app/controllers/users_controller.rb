@@ -11,15 +11,15 @@ class UsersController < ApplicationController
         end
          #POST user
         def create
-         user=User.create!(user_params)
+         user = User.create!(user_params)
          render json: user, status: :created
         
         end
  
         #PUT/PATCH user
         def update
-            @user.update(user_params)
-            render json: user, status: :ok
+            @user.update!(user_params)
+            render json: user, status: :accepted
         end
 
         #DELETE user

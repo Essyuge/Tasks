@@ -20,8 +20,8 @@ class TasksController < ApplicationController
     
 #PUT /tasks/:id
     def update
-        @task.update(task_params)
-        render json: task, status: :ok
+        @task.update!(task_params)
+        render json: task, status: :accepted
 
     end
 
