@@ -73,9 +73,8 @@ curl http://localhost:3000/tasks
 ### Create a New Task
 
 Send a POST request to `/tasks` with the task details in the request body.
-
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '{
+curl '{
   "title": "Complete project proposal",
   "description": "Create a detailed project proposal for the upcoming sprint.",
   "due_date": "2023-11-15"
@@ -85,40 +84,28 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 Send a PUT request to /tasks/:id with the updated task details.
 ```bash
-curl -X PUT -H "Content-Type: application/json" -d '{
+curl  '{
   "title": "Complete project proposal (Updated)",
   "description": "Create a detailed project proposal for the upcoming sprint (Updated).",
   "due_date": "2023-11-20"
 }' http://localhost:3000/tasks/1
 ```
-
 ### Delete a task
 
 Send a DELETE request to /tasks/:id to delete a task.
 ```bash
-curl -X DELETE http://localhost:3000/tasks/1
+curl DELETE http://localhost:3000/tasks/1
 ```
-
 ## API Endpoints
 
 The API provides the following RESTful endpoints:
 
-
-1. **List All Tasks**
-   - Endpoint: `GET /tasks`
-
-2. **Create a Task**
-   - Endpoint: `POST /tasks`
-
-3. **Update a Task**
-   - Endpoint: `PUT /tasks/:id`
-
-4. **Delete a Task**
-   - Endpoint: `DELETE /tasks/:id`
+1. **List All Tasks**  - Endpoint: `GET /tasks`
+2. **Create a Task**   - Endpoint: `POST /tasks`
+3. **Update a Task**   - Endpoint: `PUT /tasks/:id`
+4. **Delete a Task**   - Endpoint: `DELETE /tasks/:id`
 
 These are the primary endpoints for managing tasks in your API. Replace `:id` with the actual task ID in the `PUT` and `DELETE` endpoints when targeting specific tasks. For more detailed information about each endpoint, including request and response examples, please refer to the corresponding sections in this README. 
-
-
 
 ## Authentication and Authorization
 
@@ -153,8 +140,6 @@ The API relies on a  SQlite database to store task data. The database schema inc
 
 1. [Explain the structure of the database]
 2. [List the database tables and their relationships]  -->
-
-
 
 ## License
 
