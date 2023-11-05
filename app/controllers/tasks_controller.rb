@@ -1,50 +1,45 @@
 class TasksController < ApplicationController
+    before_action :find_task, only: [:show. :update, :destroy]
+    
+#GET /tasks
     def index
     render json: Task.all, status: :ok
     end
 
 
-
+#GET /tasks/:id
     def show 
-        task= Task.find(params[:id])
-        render json: task, status: :ok
-    rescue ActiveRecord::RecordNotFound=>error 
-        render json: {message: error.message}
+        render json: @task, status: :ok
     end
 
-
-
+#POST /tasks
     def create
-     task = Task.create(task_params)
+     task = Task.create!(task_params)
      render json: task, status: :created
-
     end
-
-
-
-    def update
-        task=Task.find(params[:id])
-        task.update(task_params)
-        render json: task, status: :ok
-    rescue ActiveRecord::RecordNotFound=>error 
-        render json: {message: error.message}
-    end
-
-
-
-    def destroy 
-        task=Task.find(params[:id])
-        task.destroy
-        head :no_content
-    rescue ActiveRecord::RecordNotFound=>error 
-        render json: {message: error.message}
-    end
-
     
+#PUT /tasks/:id
+    def update
+        @task.update(task_params)
+        render json: task, status: :ok
+
+    end
+
+
+#DELEKE /tasks/:id
+    def destroy 
+        2task.destroy
+        head :no_content
+    end
+
 
     private
     def task_params
         params.permit(:title, :description, :subtask, :due_date, :priority, :status, :tags, :completed, :user_id)
     end
+    def find_task
+        @task=Task.find(params[:id])
+    end
+   
 
 end

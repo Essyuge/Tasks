@@ -1,41 +1,31 @@
 class UsersController < ApplicationController
-    
-    def index
+ before_action :find_user, only: [:show, :update, :destroy]
+
+       #GET all user
+        def index
         render json: User.all, status: :ok
         end
-    
+        #GET user by id
         def show 
-            user= User.find(params[:id])
-            render json: user, status: :ok
-
-        rescue ActiveRecord::RecordNotFound=>error 
-            render json: {message: error.message}
-
+            render json: @user, status: :ok
         end
-
+         #POST user
         def create
-         
-         user = User.create(user_params)
+         user=User.create!(user_params)
          render json: user, status: :created
-         
+        
         end
-
+ 
+        #PUT/PATCH user
         def update
-            user=User.find(params[:id])
-            user.update(task_params)
+            @user.update(user_params)
             render json: user, status: :ok
-
-        rescue ActiveRecord::RecordNotFound=>error 
-            render json: {message: error.message}
         end
 
+        #DELETE user
         def destroy 
-            user= User.find(params[:id])
-            user.destroy
+            @user.destroy
             head :no_content
-
-        rescue ActiveRecord::RecordNotFound=>error 
-            render json: {message: error.message}
     
         end
     
@@ -43,4 +33,15 @@ class UsersController < ApplicationController
         def user_params
             params.permit(:name, :email, :password)
         end
+
+        def find_user
+            @user=User.find(params[:id]) 
+        end
 end
+
+        # rescue ActiveRecord::RecordInvalid =>invalid
+        #     render json: {message: invalid.record.errors.full_messages} , status: 
+        #     :unprocessable_entity
+
+        # rescue ActiveRecord::RecordNotFound=>error 
+        #     render json: {message: error.message}
