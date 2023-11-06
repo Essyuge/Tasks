@@ -7,7 +7,7 @@ class UsersController < ApplicationController
         end
         #GET user by id
         def show 
-            render json: @user, status: :ok
+            render json: @user, include: :tasks, status: :ok
         end
          #POST user
         def create

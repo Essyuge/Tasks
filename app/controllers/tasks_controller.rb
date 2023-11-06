@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-    before_action :find_task, only: [:show. :update, :destroy]
+    before_action :find_task, only: [:show, :update, :destroy]
     
 #GET /tasks
     def index
@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
 #GET /tasks/:id
     def show 
-        render json: @task, status: :ok
+        render json: @task, include: :user, status: :ok
     end
 
 #POST /tasks
@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 
 #DELEKE /tasks/:id
     def destroy 
-        2task.destroy
+        task.destroy
         head :no_content
     end
 
