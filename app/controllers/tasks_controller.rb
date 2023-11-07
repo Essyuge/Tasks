@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
 #GET /tasks/:id
     def show 
-        render json: @task, include: :user, status: :ok
+        render json: @task, status: :ok
     end
 
 #POST /tasks
