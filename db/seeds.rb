@@ -42,7 +42,7 @@ Task.create(
     priority: "Low",
     status: "In Progress",
     tags: "Health, Fitness",
-    completed: false,
+    completed: true,
     user_id: 3
   )
 
@@ -66,7 +66,7 @@ Task.create(
     priority: "Medium",
     status: "To-Do",
     tags: "Groceries, Shopping",
-    completed: false,
+    completed: true,
     user_id: 2
   )
   
