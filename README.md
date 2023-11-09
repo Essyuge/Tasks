@@ -96,16 +96,9 @@ Send a DELETE request to /tasks/:id to delete a task.
 ```bash
 curl DELETE http://localhost:3000/tasks/1
 ```
-## API Endpoints
 
-The API provides the following RESTful endpoints:
+![POSTMAN Image](./app/image/Screenshot(547).png)
 
-1. **List All Tasks**  - Endpoint: `GET /tasks`
-2. **Create a Task**   - Endpoint: `POST /tasks`
-3. **Update a Task**   - Endpoint: `PUT /tasks/:id`
-4. **Delete a Task**   - Endpoint: `DELETE /tasks/:id`
-
-These are the primary endpoints for managing tasks in your API. Replace `:id` with the actual task ID in the `PUT` and `DELETE` endpoints when targeting specific tasks. For more detailed information about each endpoint, including request and response examples, please refer to the corresponding sections in this README. 
 
 ## Authentication and Authorization
 
