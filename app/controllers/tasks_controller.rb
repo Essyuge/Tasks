@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
     before_action :find_task, only: [:show, :update, :destroy]
+   
     
 #GET /tasks
     def index

@@ -1,12 +1,9 @@
 class UsersController < ApplicationController
- before_action :find_user, only: [:show, :update]
-
-        #GET user by id
-        # def index
-        # render json: User.all, status: :ok
-        # end
+    skip_before_action :authenticate_user, only: [:create] 
+   
         def show 
-            render json: @user, status: :ok
+            user=User.find(params[:id]) 
+            render json: user, status: :ok
         end
          #POST user
         def create
@@ -23,9 +20,7 @@ class UsersController < ApplicationController
             params.permit(:name, :email, :password)
         end
 
-        def find_user
-            @user=User.find(params[:id]) 
-        end
+        
 end
 
         # rescue ActiveRecord::RecordInvalid =>invalid
