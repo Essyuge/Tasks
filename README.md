@@ -34,7 +34,7 @@ Before you begin, ensure you have the following prerequisites:
 
 - Ruby (latest version)
 - Rails (latest version)
-- PostgreSQL or MySQL database
+
 
 ### Installation
 
@@ -49,13 +49,11 @@ cd tasks-api
 2. Install gem dependencies:
 bundle install
 
-3. Configure the database connection in config/database.yml.
-
-4. Create and migrate the database:
+3. Create and migrate the database:
 rails db:create
 rails db:migrate
 
-5. Start the Rails server:
+4. Start the Rails server:
 rails server 
 ```
 
@@ -68,36 +66,43 @@ This API is designed to be easy to integrate into your projects. You can use it 
 
 Retrieve a list of tasks with a GET request to /tasks.
 ```bash
-curl http://localhost:3000/tasks
+GET http://localhost:3000/tasks
 ```
 ### Create a New Task
 
 Send a POST request to `/tasks` with the task details in the request body.
 ```bash
-curl '{
-  "title": "Complete project proposal",
-  "description": "Create a detailed project proposal for the upcoming sprint.",
-  "due_date": "2023-11-15"
+'{
+  "title": "",
+  "description": "",
+  "subtask": "",
+   "due_date": "",
+   "priority": "",
+   "status": "",
+   "tags": "",
+   "completed": "Not Completed"
 }' http://localhost:3000/tasks
 ```
 ### Update a task
 
 Send a PUT request to /tasks/:id with the updated task details.
 ```bash
-curl  '{
-  "title": "Complete project proposal (Updated)",
-  "description": "Create a detailed project proposal for the upcoming sprint (Updated).",
-  "due_date": "2023-11-20"
-}' http://localhost:3000/tasks/1
+ PUT http://localhost:3000/tasks/1
+
 ```
 ### Delete a task
 
 Send a DELETE request to /tasks/:id to delete a task.
 ```bash
-curl DELETE http://localhost:3000/tasks/1
+DELETE http://localhost:3000/tasks/1
 ```
 
+
 ![POSTMAN Image](https://github.com/Essyuge/Tasks-API/blob/main/Screenshot%20(547).png)
+
+
+![POSTMAN Image](https://github.com/Essyuge/Tasks-API/blob/main/Screenshot%20(548).png)
+![POSTMAN Image](https://github.com/Essyuge/Tasks-API/blob/main/Screenshot%20(549).png)
 
 
 ## Authentication and Authorization
@@ -106,18 +111,15 @@ This section outlines the authentication and authorization mechanisms used in th
 
 ### Authentication
 
-The API utilizes [authentication method or gem/library] to authenticate users. Here's how it works:
+The API utilizes [BCrypt gem] to authenticate users. Here's how it works:
 
-1. [Explain the authentication process and setup]
-2. [Provide details on obtaining authentication tokens or API keys]
+1. bcrypt take password makes it into a hash sort it and stores it.
+2. sessions and cookies are implemented to Remember user across all URLs
 
 ### Authorization
 
 To protect your resources, the API employs an authorization mechanism based on user roles or permissions. Users with different roles can access different parts of the API.
 
-1. [Explain how authorization is implemented]
-2. [Provide examples of user roles and permissions]
-<!-- install the Bcrypt gem  -->
 
 ## Error Handling and Validation
 
@@ -129,14 +131,5 @@ I Implemented error handling to return appropriate status codes and error messag
 ## Database
 
 The API relies on a  SQlite database to store task data. The database schema includes tables for tasks and users to ensure data integrity and security. 
-<!-- This section provides details about the database structure.
 
-1. [Explain the structure of the database]
-2. [List the database tables and their relationships]  -->
-
-## License
-
-This project is licensed under the [1980/EU].
-
-<!-- 1. [Specify your license type and terms] -->
 
