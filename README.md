@@ -97,7 +97,7 @@ Send a DELETE request to /tasks/:id to delete a task.
 curl DELETE http://localhost:3000/tasks/1
 ```
 
-![POSTMAN Image](./app/image/Screenshot(547).png)
+![POSTMAN Image](https://github.com/Essyuge/Tasks-API/blob/main/Screenshot%20(547).png)
 
 
 ## Authentication and Authorization
